@@ -4,3 +4,9 @@
 factor_rotation/__pycache__/
 
 ipynb/\.ipynb_checkpoints/
+
+japanese-wikipedia-200dimension/entity_vector\.model\.txt
+
+japanese-wikipedia-200dimension/parsimax_axis\.npy
+
+japanese-wikipedia-200dimension/parsimax_rotated\.npy
