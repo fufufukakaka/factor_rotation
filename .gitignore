@@ -1,9 +1,13 @@
 
-\.DS_Store
-
 factor_rotation/__pycache__/
 
+factor_rotation/\.DS_Store
+
 ipynb/\.ipynb_checkpoints/
+
+japanese-wikipedia-200dimension/\.DS_Store
+
+\.DS_Store
 
 japanese-wikipedia-200dimension/entity_vector\.model\.txt
 
