@@ -3,11 +3,11 @@ sys.path.append(".")
 import gensim
 import numpy as np
 import factor_rotation as fr
-
+import pandas as pd
 
 def load_word2vec_model():
     print('loading the model...')
-    model = gensim.models.KeyedVectors.load_word2vec_format(MODEL_FILE, binary=True)
+    model = gensim.models.KeyedVectors.load_word2vec_format(MODEL_FILE, binary=False)
     print('pre-trained word2vec model loaded...')
     return model
 
@@ -53,15 +53,20 @@ def quartimax(unrotated):
 def main():
     model = load_word2vec_model()
     unrotated, word_list = unrotated_reps(model)
+    
+    word_list = pd.DataFrame(word_list)
+    word_list.to_csv("word_list.csv")
 
     del model
     del word_list
 
     print('rescaling...')
-    scale = .01
+    scale = .001
     unrotated *= scale
     print(np.max(unrotated))
     print(np.min(unrotated))
+#     print("normalize")
+    
 
     print('start rotating...')
     mat_L, mat_T, *_ = method_dic[method_name](unrotated)

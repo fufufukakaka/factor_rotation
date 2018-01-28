@@ -1,0 +1,6 @@
+
+\.DS_Store
+
+factor_rotation/__pycache__/
+
+ipynb/\.ipynb_checkpoints/
